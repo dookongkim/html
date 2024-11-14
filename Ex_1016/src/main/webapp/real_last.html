@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			function colorChange(){
+				let zone=document.getElementById("zone");
+				let color=document.getElementById("color");
+				let letter=document.getElementById("letter");
+				
+				switch(color.value){
+					case "빨강":
+					zone.style.background="red";
+					letter.style.color="white";
+					letter.innerHTML="red";
+					break;
+					case "파랑":
+					zone.style.background="blue";
+					letter.style.color="white";
+					letter.innerHTML="blue";
+					break;
+					case "초록":
+					zone.style.background="green";
+					letter.style.color="white";
+					letter.innerHTML="green";
+					break;
+					case "노랑":
+					zone.style.background="yellow";
+					letter.style.color="black";
+					letter.innerHTML="yellow";
+					break;
+				}
+				
+			}
+		</script>
+		
+		<style>
+			#zone{background-color: black;
+				  width:300px;
+				  height:300px;
+				  margin-top:30px;
+				  }
+			
+			hr{width:300px;
+			   float:left;
+			   margin-top:10px;}	  
+			head{float:left;}
+			
+			#letter{text-align: center;
+					padding-top:140px;
+					font-size: 20px;
+					}	  
+		</style>
+	</head>
+	
+	<body>
+		<div id="head">
+			색상선택
+			<select id="color" onchange="colorChange()">
+				<option>::색상선택::</option>
+				<option value="빨강">빨강</option>
+				<option value="파랑">파랑</option>
+				<option value="초록">초록</option>
+				<option value="노랑">노랑</option>
+			</select>
+		</div>
+		<hr>
+		
+		<div id="zone">
+			<p id="letter"></p>
+		</div>
+		
+		
+	</body>
+</html>

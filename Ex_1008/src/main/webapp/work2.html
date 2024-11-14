@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<link rel="stylesheet" href="css/reset.css"/>
+		<style>
+			.main >li{width:100px;
+					 height:90px;
+					 background-color: black;
+					 color: white;
+					 text-align: center;
+					 position:absolute;
+					 font-size: 25px;
+					 padding-top:40px;}
+					 
+			 .home{left: 0; top:10px;}
+			 
+			.service{left: 100px; top:10px;
+						position: relative;}	
+						
+			.introduce{left: 200px; top:10px;}
+			
+			.tel{left:300px; top:10px;}
+		
+			.menu {display: none;
+				  background-color: black;
+				  text-align: center;
+				  color: white;
+				  position:absolute;
+				  z-index: 10;
+				  font-size: 25px;}
+			
+			.menu li{padding: 10px 0;
+					 width:120px;
+					 height:60px;}
+			
+			.service:hover .menu{display:block;
+								background-color: black;}
+			
+			.menu li:hover{background-color:darkgray;}
+			
+		</style>
+	</head>
+	
+	<body>
+		
+		<ul class="main">
+			<li class="home">홈</li>
+			<li class="service">서비스
+				
+				<ul class="menu">
+					<li>웹 개발</li>
+					<li>앱 개발</li>
+					<li>디자인</li>
+				</ul>
+			</li>
+			<li class="introduce">소개</li>
+			<li class="tel">연락처</li>
+		</ul>
+		
+			
+		
+	</body>
+</html>

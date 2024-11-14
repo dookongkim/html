@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 함수</title>
+	
+		<script>
+			//일반 변수는 스크립트 영역에서 정의하고 참조가능
+			let div;
+			
+			//검색코드는 반드시 함수 안에서 정의되어야 함
+			//txt=document.getElementById("event_txt");
+			
+			function send(){
+				
+				//id 가 event_txt인 태그 탐색
+				let txt=document.getElementById("event_txt");
+				
+				//그 태그의 value를 가져옴
+				let result= txt.value;
+				alert(result);
+				
+				div=document.getElementById("mydiv");	
+				
+				div.innerHTML=txt.value
+			}
+			
+			function send2(v){
+				let input=document.getElementById("tm");
+				input.value=v;
+			}
+			
+			function greet(n){
+				let message=document.getElementById("txt1");
+				message.value=n;
+				
+				let ptag=document.getElementById("myp");
+				ptag.innerHTML=n;
+				
+				let divtag=document.getElementById("mydiv");
+				divtag.innerHTML=n;
+			}
+			
+		</script>
+	
+	</head>
+	
+	<body>
+		<input type="text" id="event_txt" value="" placeholder="정수를 입력하세요"> 
+		<input type="button" value="확인" onclick="send();">
+		
+		<br>
+		
+		<input id="txt1">
+		<input type="button" value="테스트" onclick="send2('hi');">
+		 
+		<br>
+		
+		<input type="button" value="내용1" onclick="greet('안녕하세요');" >
+		<input type="button" value="내용2" onclick="greet('반갑습니다');" >
+	
+		<br>
+	
+		
+		<p id="myp"></p>
+	
+		<div id="mydiv"></div>
+	
+	
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

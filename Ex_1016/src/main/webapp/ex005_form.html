@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			function send( f ){
+				
+				let id=f.id;
+				let pwd=f.pwd;
+				
+				f.submit();
+				
+			}
+		</script>
+	</head>
+	
+	<body>
+		<form method="get" action="test.jsp">
+			<input name="id"><br>
+			<input name="pwd" type="password">
+			
+			<!-- this 는 확인버튼을 의미
+			 this.form은 '확인버튼'을 소유하고 있는 폼 태그-->
+			<input type="button" value="확인" onclick="send(this.form);">
+			
+			
+		</form>
+		
+		
+	</body>
+</html>

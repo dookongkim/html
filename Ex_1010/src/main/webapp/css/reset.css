@@ -1,0 +1,11 @@
+@charset "UTF-8";
+*{margin:0; padding:0;}
+a{text-decoration: none;}
+li{list-style: none;}
+table{border-collapse: collapse;
+	  text-align:left;
+	  margin:0 auto;
+	  size: 120%;}
+tr{text-align:left;}
+td{text-align:left;}
+th{text-align:left;}

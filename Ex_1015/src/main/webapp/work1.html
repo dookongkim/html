@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<title>Insert title here</title>
+		
+		<script>
+			
+		</script>
+		
+		<style>
+			#main{border: 1px solid black;
+				  margin:0 auto;
+				  width:700px;}
+			
+			#nochoice{display: inline;}
+			
+			#title{width:400px;}
+			#sub{font-weight: bold;}
+			
+			#input{width: 400px;
+				  height:250px;
+				 
+				 vertical-align:middle;
+				}
+			
+			#naeyong{display:inline;
+					 font-weight: bold;}
+			
+			#file1{margin-top:30px;}
+			
+			#file2{font-weight: bold;
+				  display: inline;
+				  margin-top:20px;}
+			
+			#write{margin-left:100px;
+				   margin-bottom: 20px;}
+			
+		</style>
+		
+		
+	</head>
+	
+	<body>
+		<div id="main">
+			<h>공지사항 작성하기</h>
+			
+			<p id="sub">제목 <input type="text" id="title" placeholder="제목을 입력하시오."></p>
+			
+			<p id="naeyong">내용</p>
+			
+			<textarea id="input" placeholder="내용을 입력하시오."></textarea>
+			
+			<div id="file1">
+				<p id="file2">첨부파일 <input type="button" value="파일선택"> <p id=nochoice>선택된 파일 없음</p></p>
+			</div>
+			
+			<div id="write">
+				<input type="button" value="작성하기">
+			</div>
+			
+		</div>
+	</body>
+</html>

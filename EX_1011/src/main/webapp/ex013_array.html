@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			
+			//자바스크립트의 배열은 index 개수에 제한이 없음
+			let money=new Array(8);
+			
+			money[0]=10;
+			money[1]=20;
+			money[2]="하이";
+			money[3]=3.14;
+			money[4]=50;
+			
+			for(let i=0;i<money.length;i++){
+				document.write(money[i]+"<br>");
+				
+				//브라우저의 console에 메시지 출력
+				console.log("log : "+ i);
+			}
+			
+			document.write("<hr>");
+			
+			//배열의 선언 , 생성 , 초기화
+			let arr=[1,2,3,"문자열",3.14];
+			arr[5]=100;
+			arr[8]=22;
+			for(let i=0;i<arr.length;i++)
+			document.write(arr[i],"<br>");
+			
+			document.write("<hr>");
+			
+			let array=new Array(2);
+			array[0]=new Array(2);
+			array[1]=new Array(3);
+			
+			array[0][0]=10;
+			array[0][1]=20;
+			
+			array[1][0]=30;
+			array[1][1]=40;
+			array[1][2]=50;
+			
+			//2차원 배열의 선언 , 생성 , 초기화
+			
+			let array1=new Array();
+			let first=[10,20];
+			let second=[30,40,50];
+			
+			array1[0]=first;
+			array1[1]=second;
+			
+			for(let i=0;i<array1.length;i++){
+				for(let j=0;j<array[i].length;j++){
+					document.write(array1[i][j]+" ");
+				}
+				document.write("<br>");
+			}
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

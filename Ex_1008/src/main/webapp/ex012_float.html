@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>왼쪽,오른쪽 정렬(float)</title>
+
+		<style>
+			
+			*{margin:0; padding:0;}
+			
+			#container{width:500px;
+					   margin:10px auto;
+					   background-color: #fdd;
+					   padding:10px;
+					   border:5px solid #caa;
+					   overflow: hidden;/*float의 해제*/
+					   }
+					   
+			h1{text-align: center;}		
+			
+			.c1{width:200px;
+				padding:15px;
+				background-color: #dda;
+				/* float을 사용하면 부모에게 영향을 받지 않고 공중에 떠오른 형태가 된다.
+				이 상태라면 부모가 현재 객체를 자식으로 인지하지 못하므로 float의 해제가 필요하다*/
+				float:left;} 
+				
+			.c2{width:200px;
+				padding:15px;
+				background-color: #ba7;
+				float:right;}		
+		  
+					  	 
+					   
+					   
+		</style>
+	
+	</head>
+	
+	<body>
+		<div id="container">
+			<h1>캐치 티니핑</h1>
+			
+			<div class="c1">
+				사랑의 하츄핑 용기를 줘 아자핑
+			</div>
+					
+			<div class="c2">
+				사랑의 하츄핑 용기를 줘 아자핑
+			</div>
+				
+		</div>	
+		
+	</body>
+</html>

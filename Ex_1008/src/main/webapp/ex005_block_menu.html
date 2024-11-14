@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>메뉴 css</title>
+	
+		<style>
+			*{margin:0; padding:0;}
+			li{list-style: none;}
+			
+			ul{width: 130px;}
+			  
+			
+			a{text-decoration: none;
+			  background: #f30;
+			  padding:5px;
+			  display: block;
+			  margin:3px 0;
+			  color: white;}
+			  
+			/* 가상 클래스 : 특저 상황에 대해 별개의 디자인을 적용할 수 있도록 준비되어 있는 클래스*/
+			a:hover{ background: #0c0; 
+					 color:#ff0;
+					 font-weight: bold;
+					 text-decoration: underline;}  
+
+		</style>
+
+	</head>
+	<body>
+		<div id="box">
+			<h1>뽀로로 친구들</h1>
+			
+			<ul>
+				<li><a href="#">뽀로로</a></li>
+				<li><a href="#">크롱</a></li>
+				<li><a href="#">포비</a></li>
+				<li><a href="#">해리</a></li>
+			</ul>
+		</div>
+		
+	</body>
+</html>

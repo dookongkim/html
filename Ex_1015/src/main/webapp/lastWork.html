@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			
+			window.onload=function(){
+				let year=document.getElementById("year");
+				let month=document.getElementById("month");
+				let day=document.getElementById("day");
+				
+				for(let i=1970;i<=2024;i++){
+					let newYearOp=document.createElement("option");
+					newYearOp.innerHTML=i+"년";
+					newYearOp.value=i;
+					year.appendChild(newYearOp);
+				}
+				
+				for(let i=1;i<=12;i++){
+					let newMonthOp=document.createElement("option");
+					newMonthOp.innerHTML=i+"월";
+					month.appendChild(newMonthOp);
+					
+				}
+				for(let i=1;i<=31;i++){
+					let newDayOp=document.createElement("option");
+					newDayOp.innerHTML=i+"일";
+					day.appendChild(newDayOp);
+					
+				}
+				
+				
+			}
+
+			function checkChange(){
+				let year=document.getElementById("year").value;
+				let month=document.getElementById("month").value;
+				let day=document.getElementById("day");
+				
+				let lastday=0;
+				day.innerHTML="";
+				
+				
+					if(month=="1월"||month=="3월"||month=="5월"||
+					month=="7월"||month=="8월"||month=="10월"||month=="12월"){
+						lastday=31;
+					}
+					else if(month=="2월"){
+						if( (year%4==0)&&(year%100!=0) ||(year%400==0) )
+							lastday=29;
+						else{
+							lastday=28;
+						}
+					}
+					
+					else{
+						lastday=30;
+					}
+					
+				for(let i=1;i<=lastday;i++){
+					let newDayOp=document.createElement("option");
+					newDayOp.innerHTML=i+"일";
+					newDayOp.value=i;
+					day.appendChild(newDayOp);
+					 
+				}
+				
+			}
+				
+						
+			
+		</script>
+		
+	</head>
+	
+	<body>
+		생년월일(1970~2024)
+		<select id="year" onchange="checkChange()">	
+			<option>년</option>
+		</select>
+		
+		<select id="month" onchange="checkChange()">	
+			<option>월</option>
+		</select>
+		
+		<select id="day">	
+			<option>일</option>
+		</select>
+		
+	</body>
+</html>

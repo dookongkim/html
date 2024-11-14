@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	
+		<script>
+			
+			let arr=["서울","대전","대구","부산"];
+			
+			window.onload=function(){
+				
+				let sido= document.getElementById("sido");	
+					
+				
+				for(let i=0;i<arr.length;i++){
+					let newop=document.createElement("option");
+					
+					newop.innerHTML=arr[i];
+					newop.value=arr[i];
+					
+					sido.appendChild(newop);
+				}
+			}
+			
+			function changeSel(){
+				let sido=document.getElementById("sido");
+				let res= document.getElementById("res");
+				
+				res.innerHTML=sido.value;
+				
+			}
+			
+			
+		</script>
+	</head>
+	
+	<body>
+	 	지역<select id="sido" onchange="changeSel()">
+			 <option value="">:::지역을 선택하시오:::</option>
+			 
+		 </select>
+		 
+		 <br>
+		 
+		 <p id="res"></p>
+			
+	</body>
+</html>

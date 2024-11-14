@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			
+			function login(){
+				
+				let name = document.getElementById("name");
+				let age = document.getElementById("age");
+				let tell = document.getElementById("tell");
+				
+				let box = document.getElementById("box");
+				
+				// 유효성 체크
+				if(name.value.trim() == ''){
+					alert("이름을 적으세요");
+					return;
+				}
+				else if(!(/^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/.test(tell.value))){
+					alert("올바른 전화번호를 입력하세요");
+					return;
+				}
+				else if(!(/^[0-9]*$/.test(age.value))){
+					alert("올바른 나이를 입력해주세요");
+					return;
+				}
+				
+				box.innerHTML = "이름: " + name.value + "<br>" + "나이: " + age.value + "<br>" + "전화번호: " + tell.value + "<br>";	
+			}
+			
+		</script>
+		
+		<style>
+			input{
+				display: block;
+			}
+			div{
+				margin-top: 10px;
+			}
+		</style>
+		
+	</head>
+	
+	<body>
+		<input type="text" id="name" placeholder="이름">
+		<input type="text" id="age" placeholder="나이">
+		<input type="text" id="tell" placeholder="전화번호">
+		<input type="button" value="확인" onclick="login()">
+		
+		<div id="box">
+			
+		</div>
+	</body>
+
+</html>

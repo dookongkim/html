@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>글꼴</title>
+		
+		<style>
+			p#a1{font-size:30px;}
+			#a2{font-style:italic;}/*기본값: normal*/
+			#a3{font-weight:bold;}/*기본값: normal*/
+			/*여러 글꼴을 준비해두고 브라우저에서 지원하는 글꼴이라면 그것을 사용, 그렇지 않다면 다음 글꼴을 채택*/
+			#a4{font-family:gulim,"궁서체" ;}
+			
+			#a5{font-variant: small-caps;}
+			
+			/*축약코드 사용시 weight,style,variant,size,family 의 순서를 지켜야 함*/
+			#a6{font:bold italic 20px "돋움",gulim;}
+			
+			#a7{font:30px "굴림";}
+			/*weight 속성 적용하려면 size,family속성까지 함께 정의되어야 함*/
+			
+			#a8{font:bold 40px "궁서","돋움"; }
+			
+			
+		</style>
+	</head>
+	
+	<body>
+		<p id="a1">글꼴 연습하자</p>	
+		<p id="a2">글꼴 연습하자</p>	
+		<p id="a3">글꼴 연습하자</p>	
+		<p id="a4">글꼴 연습하자</p>	
+		<p id="a5">The End</p>	
+		<p id="a6">글꼴 연습하자</p>
+			
+		<p id="a7">덤벙대는 깜빡핑</p>	
+		<p id="a8">상상력의 띠용핑</p>	
+		
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="css/reset.css"/>
+		
+		<script>
+			
+			
+			document.write("<table border=1>" + "<thead>" +"<tr>")
+			
+			for(let i=2;i<=9;i++){
+				document.write("<th>"+i+"단</th>");
+			}
+					document.write("</tr></thead>");
+					
+			for(let i=1;i<=9;i++){	
+				document.write("<tr>");
+				for(let j=2;j<=9;j++){
+					document.write("<th>"+ j+" * "+i+" = "+i*j +"</th>")
+					}
+					document.write("</tr>");
+				}
+					
+			
+			
+			document.write("</table>")
+			
+			
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

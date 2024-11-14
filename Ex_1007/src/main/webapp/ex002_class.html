@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>하위 클래스 css 적용</title>
+		
+		<style>
+			/* .box 내부의 h2태그에만 속성을 적용*/
+			.box h2{color:red;}
+			/*.box span{color:gray;}*/
+		
+			.s_red{color:red;}
+			h2 .s_color {color:aqua;}
+			h3 .s_color {color:brown;}	
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<h2><span>클래스</span> 연습1</h2>
+			
+			<div class="box">
+				<h2><span class="s_color">클래스</span> 연습2</h2>
+				<h3><span class="s_color">클래스</span> 연습3</h3>
+			</div>
+		</div>
+		
+		<h2><span class="s_red">클래스</span> 연습4</h2>
+	</body>
+
+</html>

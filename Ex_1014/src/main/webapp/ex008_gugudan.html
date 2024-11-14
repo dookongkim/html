@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			
+			window.onload = function(){
+				let gugu = document.getElementById("gugu");
+				
+				for(let i = 2; i <10; i++){
+					let newOp = document.createElement("option");
+					newOp.innerHTML = i + "단";
+					newOp.value = i;
+					gugu.appendChild(newOp);
+				}
+			}
+			
+			function gugudan(){
+				
+				let dan = document.getElementById("gugu").value;
+				let result ="";
+				for(let i=1; i<10; i++){
+					result += dan + " * " + i + " = " + (i*dan) + "<br>";
+				}
+				
+				let box = document.getElementById("box");
+				box.innerHTML = result;
+			}
+			
+		</script>
+	</head>
+	
+	<body>
+		<select id="gugu">
+			
+		</select>
+		<input type="button" value="확인" onclick="gugudan()">
+		<div id="box">
+			
+		</div>
+	</body>
+
+</html>

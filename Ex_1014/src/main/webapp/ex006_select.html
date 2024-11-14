@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	<script>
+		function cal(){
+			let num1 = document.getElementById("num1").value;
+			let num2 = document.getElementById("num2").value;
+			
+			let op = document.getElementById("op").value;
+			let box = document.getElementById("box");
+			
+			let p_num =  /^[0-9]*$/;
+			
+			if(num1 == "" || num2 == ""){
+				alert("입력해");
+				return;
+			}
+			
+			if(!p_num.test(num1) || !p_num.test(num2)){
+				alert("정수만 입력하세요");
+				return;
+			}else{
+				
+				//소수점 2자리를 판단하는 정규식
+				let p_float = /^(\d*)[\.]?(\d{1,2})?$/;
+				switch(op){
+					case "p":
+						box.innerHTML = "결과 : " + (Number(num1)+Number(num2));
+						break;
+					case "s":
+						box.innerHTML = "결과 : " + num1-num2;
+						break;
+					case "m":
+						box.innerHTML = "결과 : " + num1*num2;
+						break;
+					case "n":
+						//연산결과가 소수점 2자리를 넘긴다면..
+						if(!p_float.test(num1/num2)){
+							//소수점을 가진 결과는 최대 소수점 2자리 까지만 표기
+							box.innerHTML = "결과 : " + (num1/num2).toFixed(2);
+							break;
+						}
+						box.innerHTML = "결과 : " + num1/num2;
+						break;
+				}
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<input id="num1" size="5" placeholder="정수">
+	<input id="num2" size="5" placeholder="정수">
+	<select id="op">
+		<option value="p">더하기</option>
+		<option value="s">뺴기</option>
+		<option value="m">곱하기</option>
+		<option value="n">나누기</option>
+	</select>
+	<input type="button" value="실행" onclick="cal()">
+	<div id="box"></div>
+</body>
+
+</html>

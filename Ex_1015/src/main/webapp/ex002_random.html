@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			let rnd=Math.floor(Math.random()*100)+1;
+			//alert(rnd);
+			
+			let log_txt="";
+			
+			function send(){
+			
+				let num=document.getElementById("num").value;
+				let log=document.getElementById("log");
+				let result=document.getElementById("result");
+				
+				//유효성 체크
+				let p_num= /^[0-9]*$/;
+				if( !p_num.test(num) || num.trim()==''||
+					 num.trim() <1 || num.trim() >100){
+					alert("입력하신 값이 올바르지 않습니다.");
+					return;
+					}
+				
+				log_txt +=num+" ";
+				log.innerHTML=log_txt;
+				
+				if(num >rnd){
+					result.innerHTML = "입력받은 값이 더 큽니다";
+				}else if(num<rnd){
+					result.innerHTML = "입력받은 값이 더 작습니다";
+				}else{
+					result.innerHTML ="정답";
+				}
+			}
+			
+		</script>
+	</head>
+	
+	<body>
+		</body>
+		<p>1~100사이의 숫자 중 하나를 입력해서 정답을 맞혀보세요</p>
+		<input id="num" size="5">
+		
+		<input type="button" value="확인" onclick="send()">
+		
+		<div id="log"></div>
+		
+		<div id="result"></div>
+		
+	
+</html>

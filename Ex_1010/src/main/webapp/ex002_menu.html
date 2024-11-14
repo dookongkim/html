@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<link rel="stylesheet" href="css/reset.css"/>
+		
+		<style>
+			#container{width:290px;
+					   margin:10px auto;}
+			
+			.menu{background-color: #333;
+				  padding:20px;}			
+					   
+			.menu ul li{display:inline;
+						margin-right:20px;}
+			
+			.menu ul li a{color:#fff;
+						  font-weight: bold;}			
+			
+			li:nth-child(2){position:relative;}
+		
+			
+			
+			.submenu{position:absolute;
+					 width:100px;
+					 background-color: #444;
+					 left:0;
+					 display: none;}
+				
+			
+			.submenu li a{color:#fff;
+						  padding:10px;
+						  display:block;}
+						  
+			.submenu li a:hover{background-color: #555;}
+			
+			li:hover .submenu{display:block;}
+			
+			
+		</style>
+		
+	</head>
+	
+	<body>
+		<div id="container">
+			<div class="menu">
+				<ul>
+					<li><a href="#">홈</a></li>
+					
+					<li>
+						<a href="#">서비스</a>
+						<ul class="submenu">
+							<li><a herf="#">웹개발</a></li>
+							<li><a herf="#">앱개발</a></li>
+							<li><a herf="#">디자인</a></li>
+						</ul>
+					</li>
+					
+					<li><a href="#">소개</a></li>
+					
+					<li><a href="#">연락처</a></li>
+					
+				</ul>
+			</div>
+			
+			
+		</div>
+	
+	
+	</body>
+	
+</html>

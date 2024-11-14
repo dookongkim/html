@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			function send(){
+				let f=document.getElementById("ff");
+				
+				let id=f.id.value;
+				let area=f.tarea.value;
+				
+				f.method="get";
+				
+				f.action="test.jsp";
+				
+				f.submit();
+				
+			}
+			
+		</script>
+	</head>
+	
+	<body>
+		<form id="ff">
+			<input name="id"><br>
+				<textarea name="tarea">
+					ozvcxkokvczx
+				</textarea>
+			
+			<input type="button" value="확인" onclick="send();">
+			
+		</form>
+		
+	</body>
+</html>

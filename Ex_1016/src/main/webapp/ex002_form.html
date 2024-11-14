@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			function check(){
+				//submit을 위한 form 태그를 검색
+				let f=document.forms[1];
+				
+				//form 태그에 name속성이 m_id인 객체를 찾아서 value 가져옴			
+				let id=f.m_id.value;			 
+				let pwd=f.m_pwd.value;
+				
+				//유효성 체크
+				if(id ===''){
+					alert("아이디 필수");
+					return;
+				}
+				if(pwd ===''){
+					alert("비밀번호 필수");
+					return;
+				}
+				
+				//GET : 파라미터를 url에 노출 (속도 빠름)
+				//POST : 파라미터를 url에 노출시키지 않음(속도 느림)
+				f.method='GET';
+				f.method='POST';
+				
+				//이동할 페이지
+				f.action='login.jsp';
+				
+				//입력된 파라미터를 전달
+				f.submit();
+				
+			}
+			
+		</script>
+	</head>
+
+	<body>
+		<form></form>
+		
+		
+		<!--서버로 값을 전달하고자 할 때-->
+		<form>
+			<table border="1">
+				<tr>
+					<th>아이디</th>
+					<td><input name="m_id"></td>
+				</tr>
+				
+				<tr>
+					<th>비밀번호</th>
+					<td><input type="password" name="m_pwd"></td>
+				</tr>
+				
+				<tr>
+					<th>나이</th>
+					<td><input name="age"></td>
+				</tr>
+				
+				
+				
+				<tr>
+					<td colspan="2" align="center">
+						<!--<input type="submit" value="전송">-->
+						<input type="button" value="전송" onclick="check();">
+					</td>
+				</tr>
+			
+			</table>
+		</form>
+		
+		
+	</body>
+</html>

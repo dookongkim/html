@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			function clicked(){
+			let message=document.getElementById("checkword");
+				message.style.display="block";
+				
+			}
+			function check(){
+				let id=document.getElementById("id").value.trim();
+				let password=document.getElementById("password").value.trim();
+				let passwordcheck=document.getElementById("passwordcheck").value.trim();
+				
+				if(id==""||password==""||passwordcheck==""){
+					alert("필수 입력 항목 입니다.");
+				}
+				else{
+					alert("회원가입 완료");
+				}
+				
+			}
+			
+		</script>
+		
+		<style>
+			.main{background-color: gainsboro;
+				  margin:0 auto;
+				  border:1px solid gray;
+				  width:400px;
+				  height:400px;}
+			
+			.main >div >input{display:inline;
+				  border:none;
+				  border-bottom: 2px dashed black;
+				  background-color: gainsboro;
+				  
+				  }
+				  
+				  
+			#id{margin-right:60px;
+				float:right;}
+			#password{margin-right:60px;
+				float:right;}
+			#passwordcheck{margin-right:60px;
+				float:right;}
+			#address{margin-right:60px;
+			float:right;}
+				  
+			p{display:inline;
+			  margin-left:10px;
+			  font-weight: bold;}
+			
+			#email_1{width:75px;
+			margin-left:110px;
+			height:13px;
+			padding-top:5px;}
+			
+			#email_2{width:60px; 
+			float:right;
+			margin-right:60px;
+			height:18px;}
+			
+			.main div:first-child{margin-top: 70px;}
+			.main div:nth-child(2){margin-top: 20px;}
+			.main div:nth-child(4){margin-top: 20px;}
+			.main div:nth-child(5){margin-top: 20px;
+				   				   margin-bottom: 20px;}
+				   				   
+			#joinbutton{width:380px;
+				 	    height:80px;
+				 	    margin-left:10px;
+				 	    margin-top:30px;
+				 	    background-color:rgb(128, 255, 0);
+				 	    font-size: 25px;
+				 	    font-weight: bold;}
+				 	    
+			span{display:inline;
+				 }	 	    
+				 
+			#checkword{font-size: 8px;
+					   color:dimgray;
+					   height: 8px;
+					   margin-left:175px;
+					   display:none;}
+		</style>
+		
+	</head>
+	
+	<body>
+		<div class="main">
+			<div>
+				<p>아이디</p>
+				<input type="text" id="id" name="id">
+			</div>
+			
+			<div>
+				<p>패스워드</p>
+				<input type="text" id="password" name="password" onclick="clicked()">
+			</div>
+			<div>
+				<p id="checkword">영문자 대/소문자 특수문자, 숫자포함 8~32자</p>
+			</div>
+			
+			<div>
+				<p>패스워드 확인</p>
+				<input type="text" id="passwordcheck" name="passwordcheck">
+			</div>
+			
+			<div>
+				<p>이메일</p>
+				<input type="text" id="email_1" name="email_1">
+				<span>@</span>
+				<input type="text" id="email_2" name="email_2">
+				
+			</div>
+			
+			<div>
+				<p>주소</p>
+				<input type="text" id="address" name="address">
+				<input type="text" id="address" name="address">
+			</div>
+			
+			<input type="button" value="가 입" id="joinbutton" onclick="check()">
+			
+		</div>
+		
+	</body>
+</html>

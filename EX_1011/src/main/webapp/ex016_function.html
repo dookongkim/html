@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	
+		<script>
+			
+			function func_hide(){
+				let image=document.getElementById("i_am_image");
+				
+				image.style.display='none';
+				
+			}
+			
+			function func_show(){
+				let image=document.getElementById("i_am_image");
+				
+				image.style.display='block';
+			}
+			
+		</script>	
+	
+	</head>
+
+	<body>
+		
+		<input type="button" value="숨기기" onclick="func_hide()" >
+		
+		<input type="button" value="보이기" onclick="func_show()">
+		
+		<br>
+		
+		<img id="i_am_image" src="image/float.jpg"/>
+	</body>
+</html>

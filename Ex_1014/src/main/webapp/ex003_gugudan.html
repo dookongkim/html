@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			function check(){
+				let dan = document.getElementById("dan");
+				let box = document.getElementById("box");
+				let chck_dan = /^[2-9]*$/;
+				
+				if(dan.value === '' || dan.value < 2 || dan.value > 9){
+					alert("2 ~ 9 사이의 정수값을 입력하세요");
+					return;
+				}
+				if(chck_dan.test(dan.value)){
+					let gugu ="";
+					for(let i = 1; i < 10; i++){
+						gugu += dan.value  + " * " + i + " = " + (dan.value * i) + "<br>";
+					}
+					box.innerHTML = gugu;
+				}
+				else{
+					alert("올바른 정수값을 입력하세요");
+					return;
+				}
+				
+			
+			}
+			
+			function hide(){
+				let box = document.getElementById("box");
+				let h = document.getElementById("hide");
+				if(h.value == "보이기"){
+					box.style.display = "block";
+					h.value = "숨기기";
+				}
+				else if(h.value == "숨기기"){	
+					box.style.display = "none";
+					h.value = "보이기";
+				}
+				
+			}
+		</script>
+		
+		<style>
+			#box{
+				width: 300px;
+				height: 300px;
+				background: black;
+				color: white;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<p>단:
+			<input id="dan" placeholder="입력">
+		</p>
+
+		<input type="button" id="check" value="계산하기" onclick="check()">
+		<input type="button" id="hide" value="숨기기" onclick="hide()">
+		
+		<hr>
+		
+		<div id="box">
+			
+		</div>
+	</body>
+
+</html>

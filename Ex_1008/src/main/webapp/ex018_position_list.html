@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>POSITION CSS PRACTICE</title>
+	
+		<link rel="stylesheet" href="css/reset.css"/>
+		<style>
+			*{margin: 0; padding: 0;}
+			a{text-decoration: none;}
+			li{list-style: none;}
+			
+			.bbs{width:260px;
+				 border:2px solid #ccc;
+				 padding:10px; 
+				 background-color: lightgoldenrodyellow;
+				 position: relative;}
+				 
+			.bbs h2{ color:#36f;
+					 margin-bottom: 10px;
+					 }
+			
+			.bbs ul li{height:18px;
+					   padding-left:10px;
+					   background: url(image/arrow.gif) no-repeat 0% 60%;}
+			
+			.bbs ul li a{color: #666; }
+			
+			.bbs ul li a:hover{color:burlywood;
+							   text-decoration: underline;}
+			
+			.bbs p{position: absolute;
+				   right:10px;
+				   top:10px;}
+			
+			.bbs p a{color:black;}
+			
+			.bbs p a:hover{color:darkviolet;}
+					   			
+			
+		</style>
+	</head>
+	
+	<body>
+		<div class="bbs">
+			
+			<h2>게시판 제목</h2>
+			
+			<p><a href="#"/>더보기</p>
+			
+			<ul>
+				<li><a href="#"/>최근게시글 1</li>
+				<li><a href="#"/>최근게시글 2</li>
+				<li><a href="#"/>최근게시글 3</li>
+				<li><a href="#"/>최근게시글 4</li>
+			</ul>
+		</div>
+		
+	</body>
+</html>

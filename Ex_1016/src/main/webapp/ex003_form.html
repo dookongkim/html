@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+
+		<script>
+			function send(){
+				let f=document.ff;
+				
+				let name=f.myname.value;
+			    let menu=f.sel.value;
+			    // let p=f.myp;
+			    
+			    f.submit();
+				
+			}
+		</script>
+	</head>
+
+	<body>
+		<form name="ff" method="get" action="register.jsp" >
+			<input name="myname"><br>
+			
+			<select name="sel">
+				<option value="s1">메뉴1</option>
+				<option value="s2">메뉴2</option>
+				<option value="s3">메뉴3</option>
+				<option value="s4">메뉴4</option>
+			</select>
+			
+			<!-- p, a ,div 등의 태그는 form태그의 공식적인 자식이 아니므로
+			name속성을 넣어도 form태그가 인식하지 못한다노		
+				<p name="myp">난p</p>-->
+			
+			<input type="button" value="확인" onclick="send();">
+		</form>
+			
+	</body>
+</html>

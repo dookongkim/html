@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			function showFruti(){
+				let sel = document.getElementById('fruitSelect');
+				
+				if( sel.value == "" ){
+					alert("비어있음");
+					return;
+				}
+				else{
+					alert("선택 과일: " + sel.value);
+					return;
+				}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<select id="fruitSelect">
+			<option value="">:::선택하세요:::</option>
+			<option value="apple">사과</option>
+			<option value="banana">바나나</option>
+			<option value="orange">오렌지</option>
+		</select>
+		<input type="button" value="확인" onclick="showFruti()">
+	</body>
+
+</html>

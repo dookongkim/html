@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			
+			let rnd = Math.floor(Math.random() * 100) +1;
+			
+			function check(){
+				let num = Number(document.getElementById("num1").value);
+				let log = document.getElementById("log");
+				let ch = document.getElementById("ch");
+				if(rnd == num){
+					log.innerHTML += num + " ";
+					ch.innerHTML = "정답";
+					return;
+				}
+				else if(rnd > num){
+					log.innerHTML += num + " ";
+					ch.innerHTML = "입력받은 값이 너무 작습니다.";
+				}
+				else if(rnd < num){
+					log.innerHTML += num + " ";
+					ch.innerHTML = "입력받은 값이 너무 큽니다.";
+				}
+			}
+		</script>
+		
+		<style>
+			#ch{
+				color: red;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="question">
+			<h4>1 ~ 100사이의 숫자 중 하나를 입력해서 정답을 맞혀보세요</h4>
+			<input placeholder="정수" id="num1" size="10">
+			<input type="button" value="확인" onclick="check()">
+		</div>
+		<div id="log"></div>
+		<div id="ch"></div>
+	</body>
+
+</html>

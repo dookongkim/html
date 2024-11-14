@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+
+		<script>	
+			
+			//스크립트 영역은 브라우저가 로드를 완료하면 자동으로 호출된다
+			console.log("hi script");
+			
+			let num=1;
+			let path="image/img";
+			
+			function next(){
+				num++;
+				if(num > 7){
+					num=1;
+				}
+				//이미지를 변경할 imp 태 그 검 색
+				
+				let img =document.getElementById("gallery");
+				img.src=path+num+".jpg";;
+								
+			}
+
+
+			function prev(){
+				num--;
+				if(num < 1){
+					num=7;
+				}
+				//이미지를 변경할 imp 태 그 검 색
+				
+				let img =document.getElementById("gallery");
+				img.src=path+num+".jpg";;	
+			}
+			
+			
+			//setInterval("next()",1000);
+			
+		</script>
+	</head>
+
+	<body>
+		<div id="galleryWarp">
+			<a herf="#" onclick="prev();">
+				<img src="image/left_btn.png" alt="이전버툰"/>
+			</a>
+			
+			<img src="image/img1.jpg" id="gallery" width="300" height="200"/>
+			
+			<a herf="#" onclick="next();">
+				<img src="image/right_btn.png" alt="다음버툰"/>
+			</a>
+			
+		</div>		
+		
+		
+	</body>
+</html>
